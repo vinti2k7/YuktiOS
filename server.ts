@@ -1019,6 +1019,7 @@ Keep response under 80 words, warm and actionable.`,
   // Vite Middleware integration for dev
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
+      configFile: path.resolve(process.cwd(), 'vite.config.ts'),
       server: {
         middlewareMode: true,
         watch: {
